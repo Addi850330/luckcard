@@ -1,14 +1,112 @@
 body {
   background-color: rgb(31, 21, 109);
-  margin: 0;
+  margin: 30px 0 0 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .cardinfo {
   width: 320px;
   height: 480px;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
+/*------------ bgshiny start----------------- */
+
+.cardinfo .infobg {
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  z-index: -1;
+  animation: rgbanime 8s linear infinite;
+  filter: blur(40px);
+  opacity: 0;
+  transition: 0.2s;
+}
+.cardinfo .infobg.infobgshow {
+  opacity: 1;
+}
+@keyframes rgbanime {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400% 400%;
+  }
+}
+.cardinfo .infobg.ssrank {
+  background: linear-gradient(
+    42deg,
+    rgba(255, 46, 0, 1) 9%,
+    rgba(232, 137, 4, 1) 18%,
+    rgba(255, 235, 0, 1) 26%,
+    rgba(52, 255, 0, 1) 37%,
+    rgba(0, 255, 222, 1) 49%,
+    rgba(0, 117, 255, 1) 62%,
+    rgba(171, 0, 255, 1) 78%,
+    rgba(253, 0, 0, 1) 91%
+  );
+  background-size: 400%;
+}
+.cardinfo .infobg.srank {
+  background: linear-gradient(
+    42deg,
+    rgba(255, 188, 0, 1) 20%,
+    rgba(253, 233, 0, 0.6755952380952381) 50%,
+    rgba(255, 188, 0, 1) 79%
+  );
+  background-size: 400%;
+}
+.cardinfo .infobg.arank {
+  background: linear-gradient(
+    48deg,
+    rgba(253, 187, 45, 1) 3%,
+    rgba(34, 193, 195, 1) 49%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  background-size: 400%;
+}
+.cardinfo .infobg.brank {
+  background: linear-gradient(
+    48deg,
+    rgba(182, 253, 45, 1) 3%,
+    rgba(34, 195, 174, 1) 50%,
+    rgba(88, 253, 45, 1) 100%
+  );
+  background-size: 400%;
+}
+.cardinfo .infobg.crank {
+  background: linear-gradient(
+    38deg,
+    rgb(253, 243, 255) 23%,
+    rgba(189, 148, 183, 0.625) 50%,
+    rgb(255, 255, 255) 77%
+  );
+  background-size: 400%;
+}
+.cardinfo .infobg.drank {
+  background: linear-gradient(
+    34deg,
+    rgba(64, 0, 78, 1) 23%,
+    rgba(130, 0, 159, 1) 49%,
+    rgba(45, 0, 55, 1) 77%
+  );
+  background-size: 400%;
+}
+.cardinfo .infobg.erank {
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 1) 28%,
+    rgba(243, 0, 0, 1) 52%,
+    rgba(0, 0, 0, 1) 78%
+  );
+  background-size: 400%;
+}
+
+/*------------ bgshiny end----------------- */
 .cardinfo .cardanime {
   width: 300px;
   height: 300px;

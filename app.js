@@ -2,6 +2,9 @@ const exbtn = document.querySelector(".extrac");
 const cardAnime = document.querySelector(".cardanime");
 const boxAnime = document.querySelector(".animeimg");
 const cimg = document.querySelector(".cimg");
+const stickanime = document.querySelector(".stickanime");
+const stickyimg = document.querySelector(".stickyimg");
+const bgshiny = document.querySelector(".bgshiny");
 
 const card = ["a", "b", "c", "d", "e", "f"];
 
@@ -15,14 +18,25 @@ const extractanime = function () {
   //   console.log(cimg.src);
   cardAnime.classList.add("boxshow");
   boxAnime.classList.add("runanime");
+  boxAnime.classList.remove("boxhide");
+};
+const boxend = function () {
+  stickanime.classList.add("stickshow");
+  stickyimg.classList.add("sishow");
+  bgshiny.classList.add("bgshinyshow");
 };
 
 const removebox = function () {
   cardAnime.classList.remove("boxshow");
   boxAnime.classList.remove("runanime");
+  boxAnime.classList.add("boxhide");
+  stickanime.classList.remove("stickshow");
+  stickyimg.classList.remove("sishow");
+  bgshiny.classList.remove("bgshinyshow");
   cimg.classList.add("cardimgshow");
   exbtn.classList.remove("move");
 };
 
 exbtn.addEventListener("click", extractanime);
-boxAnime.addEventListener("animationend", removebox);
+boxAnime.addEventListener("animationend", boxend);
+stickanime.addEventListener("animationend", removebox);

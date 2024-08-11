@@ -1,56 +1,153 @@
 body {
   background-color: rgb(31, 21, 109);
+  margin: 0;
+  padding: 0;
 }
 .cardinfo {
   width: 320px;
   height: 480px;
   position: relative;
+  overflow: hidden;
 }
 .cardinfo .cardanime {
   width: 300px;
   height: 300px;
-  overflow: hidden;
   position: absolute;
-  display: none;
   left: 10px;
   top: 100px;
+  z-index: 10;
 }
 .cardinfo .cardanime.boxshow {
   display: block;
 }
 .cardinfo .cardanime .animeimg {
-  width: 3300px;
+  width: 150px;
   height: 300px;
   top: 0px;
-  left: 0%;
+  left: 75px;
   position: absolute;
+  transform: rotate(0deg);
+}
+.cardinfo .cardanime .animeimg.boxhide {
+  opacity: 0;
 }
 .cardinfo .cardanime .animeimg.runanime {
+  left: 135px;
   animation: 1s boxAnime forwards;
-  animation-timing-function: steps(10, end);
 }
 .cardinfo .cardanime .animeimg img {
   width: 100%;
   height: 100%;
+  object-fit: fill;
 }
 @keyframes boxAnime {
   0% {
-    left: 0%;
+    transform: rotate(225deg);
+  }
+  25% {
+    transform: rotate(235deg);
+  }
+  50% {
+    transform: rotate(215deg);
+  }
+  75% {
+    transform: rotate(225deg);
+  }
+
+  100% {
+    transform: rotate(225deg);
+  }
+}
+.cardinfo .cardanime .stickanime {
+  width: 10px;
+  height: 80px;
+  bottom: 20px;
+  left: 75px;
+  position: absolute;
+  transform: rotate(225deg);
+  overflow: hidden;
+  opacity: 0;
+}
+.cardinfo .cardanime .stickanime.stickshow {
+  animation: 2s stickyAnime forwards;
+}
+.cardinfo .cardanime .stickanime .stickyimg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 20px;
+}
+.cardinfo .cardanime .stickanime .stickyimg.sishow {
+  animation: 2s stickyshow forwards;
+}
+@keyframes stickyAnime {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes stickyshow {
+  0% {
+    top: 20px;
   }
   100% {
-    left: -1000%;
+    top: 0px;
   }
 }
 .cardinfo .card {
   width: 100%;
   height: 100%;
   background-color: black;
+  position: relative;
 }
 .cardinfo .card img {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
 }
 .cardinfo .card img.cardimgshow {
   display: block;
+}
+
+.cardinfo .card .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./img/anime/bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.cardinfo .card .bgshiny {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./img/anime/bgshiny.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0;
+}
+.cardinfo .card .bgshiny.bgshinyshow {
+  animation: 2s bgshiny forwards;
+}
+@keyframes bgshiny {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 .extrac {
   width: 320px;

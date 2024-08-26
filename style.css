@@ -1,10 +1,18 @@
-body {
-  background-color: rgb(31, 21, 109);
-  margin: 30px 0 0 0;
+* {
   padding: 0;
+  margin: 0;
+}
+body {
+  background-image: url(./img/anime/sakura.jpg);
+  height: 100vh;
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
 }
 .cardinfo {
   width: 320px;
@@ -304,4 +312,207 @@ body {
 }
 .extrac.move {
   display: none;
+}
+.sakura {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-image: url(./img/anime/sakura.png);
+  top: 0px;
+  left: 0px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation: 5s sakura infinite;
+  cursor: none;
+  z-index: -1;
+}
+
+@keyframes sakura {
+  0% {
+    top: 0%;
+    left: 0%;
+    transform: rotate(45deg);
+  }
+
+  100% {
+    top: 110%;
+    left: 110%;
+    transform: rotate(360deg);
+  }
+}
+.sakura2 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-image: url(./img/anime/sakura.png);
+  top: 0px;
+  left: 0px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation: 4s sakura2 infinite;
+  cursor: none;
+  z-index: -1;
+}
+@keyframes sakura2 {
+  0% {
+    top: 0%;
+    left: 30%;
+    transform: rotate(45deg);
+  }
+
+  100% {
+    top: 110%;
+    left: 80%;
+    transform: rotate(360deg);
+  }
+}
+.sakura3 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-image: url(./img/anime/sakura.png);
+  top: 0px;
+  left: 0px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation: 8s sakura3 infinite;
+  cursor: none;
+  z-index: -1;
+}
+@keyframes sakura3 {
+  0% {
+    top: 0%;
+    left: 20%;
+    transform: rotate(45deg);
+  }
+
+  100% {
+    top: 110%;
+    left: 90%;
+    transform: rotate(360deg);
+  }
+}
+.sakura4 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-image: url(./img/anime/sakura.png);
+  top: 0px;
+  left: 50px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation: 7s sakura4 infinite;
+  cursor: none;
+  z-index: -1;
+}
+@keyframes sakura4 {
+  0% {
+    top: 0%;
+    left: 10%;
+    transform: rotate(45deg);
+  }
+
+  100% {
+    top: 110%;
+    left: 50%;
+    transform: rotate(360deg);
+  }
+}
+.sakura5 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-image: url(./img/anime/sakura.png);
+  top: 0px;
+  left: 50px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation: 2s sakura5 infinite;
+  cursor: none;
+  z-index: -1;
+}
+@keyframes sakura5 {
+  0% {
+    top: 0%;
+    left: 20%;
+    transform: rotate(45deg);
+  }
+
+  100% {
+    top: 110%;
+    left: 70%;
+    transform: rotate(360deg);
+  }
+}
+.cld {
+  width: 200px;
+  height: 80px;
+  position: absolute;
+  background-image: url(./img/anime/cloud1.png);
+  top: 0px;
+  left: 50px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: none;
+  z-index: -1;
+  animation: 10s cld infinite;
+}
+@keyframes cld {
+  0% {
+    left: 50px;
+  }
+  50% {
+    left: 0px;
+  }
+  100% {
+    left: 50px;
+  }
+}
+.cld2 {
+  width: 350px;
+  height: 120px;
+  position: absolute;
+  background-image: url(./img/anime/cloud2.png);
+  top: 100px;
+  right: 80px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: none;
+  z-index: -1;
+  animation: 20s cld2 infinite;
+}
+@keyframes cld2 {
+  0% {
+    right: 80px;
+  }
+  50% {
+    right: 10px;
+  }
+  100% {
+    right: 80px;
+  }
+}
+.cld3 {
+  width: 350px;
+  height: 120px;
+  position: absolute;
+  background-image: url(./img/anime/cloud3.png);
+  top: 250px;
+  left: -130px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: none;
+  z-index: -1;
+  animation: 8s cld3 infinite;
+}
+@keyframes cld3 {
+  0% {
+    left: -130px;
+  }
+  50% {
+    left: -80px;
+  }
+  100% {
+    left: -130px;
+  }
 }
